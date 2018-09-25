@@ -7,21 +7,22 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-       <h:form id="kayit_formu">
-            <h:panelGrid columns="3">
+        <h:form id="kayit_formu">
+            <h:panelGrid columns="1">
                 <h:outputText value="Adiniz:"/>
                 <h:inputText id="isim" value="#{formValidationBean.isim}" required="true" requiredMessage="Isim alani zounludur"/><!-- reuqired true olandan sonra onu bildirirki bu alan zounludu -->
                 <h:message for="isim" style="color: red"/> <!-- user gore bilmir h:message olmasa uygulamanin console'una dusur Isim alani zorunludur yazisi.User gore bilmesi ucun for ile id eyni olmalidir. Burdaki kimi  -->
-                
+
                 <h:outputText value="Soyadiniz:"/>
                 <h:inputText id="soyisim" value="#{formValidationBean.isim}" required="true" requiredMessage="Soyisim alani zorunludur"/>
                 <h:message for="soyisim" style="color:red"/>
-                             
+
                 <h:outputText value="Email:"/>
-                <h:inputText id="eposta" value="#{formValidationBean.eposta}" required="true" validatorMessage="Gecersiz eposta adresi!" requiredMessage="EPosta alani zorunludur"/><!--burda biz validator isletdik. validator yeni bizim istemediyimiz bir formatda yazsa email adresini uyari cixartsin-->
-               <!--     <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[_A-Za-z0-9-]+(\.[_A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>-->
+                <h:inputText id="eposta" value="#{formValidationBean.eposta}" required="true" validatorMessage="Gecersiz eposta adresi!" requiredMessage="EPosta alani zorunludur"><!--burda biz validator isletdik. validator yeni bizim istemediyimiz bir formatda yazsa email adresini uyari cixartsin-->
+                    <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[_A-Za-z0-9-]+(\.[_A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"/>
+                </h:inputText>
                 <h:message for="soyisim" style="color:red"/>   
-                
+
                 <h:outputText value="Sisteme giris parolaniz:"/>
                 <h:inputText id="parola" value="#{formValidationBean.parola}" required="true" requiredMessage="Parola alani zorunludur"/>
                 <h:message for="parola" style="color:red"/>
@@ -29,19 +30,19 @@
             <h:panelGrid columns="2">
                 <h:outputText value="Oturdugunuz ili secin:"/>
                 <h:selectOneMenu value="#{formValidationBean.il}" required="true" requiredMessage="Cinsiyet onemli">
-                   <f:selectItems value="#{formValidationBean.iller()}"/>
+                    <f:selectItems value="#{formValidationBean.iller()}"/>
                 </h:selectOneMenu>
-                
+
                 <h:outputText value="Cinsiyetiniz:"/>
                 <h:selectOneRadio value="#{formValidationBean.cinsiyet}" required="true" requiredMessage="Cinsiyet onemli">
-                   <f:selectItems value="#{formValidationBean.cinsiyetleridondur()}"/>
+                    <f:selectItems value="#{formValidationBean.cinsiyetleridondur()}"/>
                 </h:selectOneRadio>
-                
+
                 <h:outputText value="LinkedIN hesabiniz varmi?"/>
                 <h:selectOneRadio value="#{formValidationBean.linkedIn}" required="true" requiredMessage="Cinsiyet onemli">
-                   <f:selectItems value="#{formValidationBean.hesapvarmidondur()}"/>
+                    <f:selectItems value="#{formValidationBean.hesapvarmidondur()}"/>
                 </h:selectOneRadio>
-                 
+
                 <h:outputText value="Tam adresinizi yazin:"/>
                 <h:inputTextarea value="#{formValidationBean.adres}" required="true"/>
             </h:panelGrid>

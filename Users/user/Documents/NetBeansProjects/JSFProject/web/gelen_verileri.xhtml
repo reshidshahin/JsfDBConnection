@@ -15,15 +15,22 @@ and open the template in the editor.
     <body>
         <h:form>
             <h:panelGrid columns="1">
-                <h:outputText value="--- Melumatlar ---"/>
+                <h:outputText value="--- Melumatlar --- "/>
+                <h:outputText value="--- Ad --- "/>
                 <h:outputText value="#{formValidationBean.isim}"/>
+                <h:outputText value="--- Soyad --- "/>
                 <h:outputText value="#{formValidationBean.soyisim}"/>
+                <h:outputText value="--- Email --- "/>
                 <h:outputText value="#{formValidationBean.eposta}"/>
+                <h:outputText value="--- Parol --- "/>
                 <h:outputText value="#{formValidationBean.parola}"/>
+                <h:outputText value="--- İl --- "/>
                 <h:outputText value="#{formValidationBean.il}"/>
+                <h:outputText value="--- Cinsiyet --- "/>
                 <h:outputText value="#{formValidationBean.cinsiyet}"/>
+                <h:outputText value="--- Adres --- "/>
                 <h:outputText value="#{formValidationBean.adres}"/>
-            </h:panelGrid>
+            </h:panelGrid>  
         </h:form>
     </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form action="http://localhost:8080/My_Servlet/request" method="post"> <!-- action yerinde full urlpatterni yaziriq yoxsa islemeyecek  -->
+            <table border="0" width="5" cellspacing="2" cellpadding="2">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="right">Ad </td>
+                        <td><input type="text" name="ad"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Soyad </td>
+                        <td><input type="text" name="soyad"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="mstatus" value="Bekar">Bekar</td>
+                        <td><input type="radio" name="mstatus" value="Evli">Evli</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="language" value="Java" />Java</td>
+                        <td><input type="checkbox" name="language" value="Python" />Python</td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" name="Gonder" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </body>
+</html>
